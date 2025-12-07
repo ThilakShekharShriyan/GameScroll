@@ -1,0 +1,5 @@
+{
+  "name": "GameScroll",
+  "description": "A social platform for scrolling through and creating instant JavaScript mini-games powered by Google Gemini.",
+  "requestFramePermissions": []
+}
