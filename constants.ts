@@ -138,18 +138,7 @@ function loop() {
   if (snake.y < 0) snake.y = 600 - grid; else if (snake.y >= 600) snake.y = 0;
   snake.cells.unshift({x: snake.x, y: snake.y});
   if (snake.cells.length > snake.maxCells) snake.cells.pop();
-
-  // Draw Banana
-  ctx.save();
-  ctx.shadowColor = '#fbbf24'; 
-  ctx.shadowBlur = 15;
-  ctx.font = '22px Arial'; 
-  ctx.textAlign = 'center'; 
-  ctx.textBaseline = 'middle';
-  ctx.fillText('🍌', apple.x + grid/2, apple.y + grid/2 + 2);
-  ctx.restore();
-
-  // Draw Snake
+  ctx.fillStyle = '#ec4899'; ctx.fillRect(apple.x, apple.y, grid-2, grid-2);
   ctx.fillStyle = '#10b981';
   snake.cells.forEach((cell, i) => {
     ctx.fillRect(cell.x, cell.y, grid-1, grid-1);
